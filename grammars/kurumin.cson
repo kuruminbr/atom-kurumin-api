@@ -1,0 +1,21 @@
+'filetypes': [
+  'php'
+  'xml'
+]
+'name': 'kurumin'
+'patterns': [
+  {
+    'begin': '<\\?(php|=|)'
+    'end': '\\?>'
+    'patterns': [
+      {
+        'include': 'source.php'
+      }
+    ]
+  }
+  {
+    'match': '(?i)\\bdo_(shortcode|action)(?=\\s*\\()'
+    'name': 'source.function.kurumin.php'
+  }
+]
+'scopeName': 'source.php.kurumin'
